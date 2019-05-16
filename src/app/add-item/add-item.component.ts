@@ -18,13 +18,13 @@ export class AddItemComponent implements OnInit {
   }
 
   addItem() {
-    this.items.push(this.item);
-    this.item = '';
-    console.log(this.items);
+    if (this.item) {
+      this.items.push(this.item);
+      this.item = '';
+    }
   }
 
   deleteItem(item) {
-    console.log(item);
     for (let i = 0; i < this.items.length; i++) {
       if (this.items[i] === item) {
         this.items.splice(i, 1);
