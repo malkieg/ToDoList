@@ -1,0 +1,26 @@
+<div class="container">
+<form>
+  <input matInput placeholder="New Item" [(ngModel)]="item" name="item">
+  <button  mat-button class="addButton" (click)="addItem()">Add Item</button>
+</form>
+
+<div *ngIf="items" class="output">
+  <div *ngFor="let i of items">
+    <h1 class="items">{{i}}</h1>
+      <button mat-raised-button (click)="itemCompleted(i)" class="itemCompleted">Item Completed</button>
+    <button mat-raised-button (click)="editItem(i)">Edit Item</button>
+    <button mat-raised-button (click)="deleteItem(i)" class="deleteButton">Delete Item</button>
+      <mat-divider></mat-divider>
+  </div>
+</div>
+
+
+
+  <div *ngIf="completed" class="completed">
+
+    <div *ngFor="let c of completed">
+      <p>Completed Item:
+      <h3>{{c}}</h3>
+    </div>
+  </div>
+</div>

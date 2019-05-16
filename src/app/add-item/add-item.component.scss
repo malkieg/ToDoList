@@ -1,0 +1,33 @@
+.container{
+  text-align: center;
+}
+form{
+  display: inline-block;
+  clear: both;
+}
+.addButton{
+  color: white;
+  background-color: blue;
+}
+.items{
+  padding: 20px;
+}
+
+.deleteButton{
+  float: right;
+  color: white;
+  background-color: red;
+
+}
+.itemCompleted{
+  color: white;
+  background-color: blue;
+  float: left;
+}
+mat-divider{
+  clear: both;
+}
+.completed{
+  margin-top: 100px;
+  float: left;
+}
